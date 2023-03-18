@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Club</title>
+    <link rel="stylesheet" href="node_modules/augmented-ui/augmented-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">CC</a>
+        <form id="searchForm">
+            <input type="text" placeholder="Find Movies!" class="searchBar" name="query">
+            <button>Find</button>
+        </form>      
+    </nav>
+
+    <main>
+
+        <h2>TOP MOVIES:</h2>
+
+        <div id="container" data-augmented-ui="tr-clip bl-clip br-clip-y both">
+
+            
+        
+        </div>
+
+        <h3>REVIEWS:</h3>
+
+        <div id="containerTwo">
+              
+        </div>
+       
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

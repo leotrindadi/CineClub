@@ -1,0 +1,297 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+  
+}
+
+body{
+    background: no-repeat center/cover url(ftos/High_resolution_wallpaper_background_ID_77700338499.jpg);
+    background-color: rgb(27, 27, 27);
+    background-blend-mode: multiply;
+}    
+
+@font-face {
+    font-family: 'neon';
+    src: url(fontes/neonize.ttf);
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url(fontes/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+  
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to left, purple, transparent 95%);
+    border: 1px solid #fff;  
+    border-radius: 20px 0px 20px 0px;
+}
+
+nav .logo{
+    font-family: 'neon';
+    font-size: 18px;
+    padding: 0.3em;
+    text-decoration: none;
+    
+    color: white;
+    text-shadow:
+    0 0 7px rgb(223, 223, 223),
+    0 0 10px rgb(223, 223, 223),
+    0 0 21px rgb(223, 223, 223),
+    0 0 42px rgba(102, 3, 77, 0.76),
+    0 0 82px rgb(102, 3, 77, 0.76),
+    0 0 92px rgb(102, 3, 77, 0.76),
+    0 0 102px rgb(102, 3, 77, 0.76),
+    0 0 151px rgb(102, 3, 77, 0.76);       
+}
+
+nav .searchBar{
+    background-color: black; 
+    color: white;    
+    border-radius: 15px; 
+    text-align: center;
+    height: 20px;
+} 
+
+button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+main h2{
+    text-align: center;
+    font-family: 'neon';
+    color: white;
+    text-shadow:
+    0 0 7px rgb(223, 223, 223),
+    0 0 10px rgb(223, 223, 223),
+    0 0 21px rgb(223, 223, 223),
+    0 0 42px rgba(102, 3, 77, 0.76),
+    0 0 82px rgb(102, 3, 77, 0.76),
+    0 0 92px rgb(102, 3, 77, 0.76),
+    0 0 102px rgb(102, 3, 77, 0.76),
+    0 0 151px rgb(102, 3, 77, 0.76);
+
+    font-size: 40px;
+    padding: 40px;
+}
+
+main h3{
+    text-align: left;
+    font-family: 'neon';
+    color: white;
+    text-shadow:
+    0 0 7px rgb(223, 223, 223),
+    0 0 10px rgb(223, 223, 223),
+    0 0 21px rgb(223, 223, 223),
+    0 0 42px rgba(102, 3, 77, 0.76),
+    0 0 82px rgb(102, 3, 77, 0.76),
+    0 0 92px rgb(102, 3, 77, 0.76),
+    0 0 102px rgb(102, 3, 77, 0.76),
+    0 0 151px rgb(102, 3, 77, 0.76);
+
+    font-size: 40px;
+    padding: 40px;
+}
+
+#container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 48px;
+    width: 90%;
+    height: 300px;
+    margin: auto;
+    box-sizing: border-box;
+
+    --aug-tr: 25px;
+    --aug-bl: 57px;
+    --aug-br: 20px;
+    --aug-br-inset2: 40%;
+    --aug-border-all: 1px;
+
+    --aug-border-bg: rgb(253, 5, 253); 
+
+    --aug-inlay-all: 0px;
+    --aug-inlay-bg: linear-gradient(to bottom, purple, transparent 100%);
+    
+    --aug-rect-l1: initial;
+    --aug-l1-width: 110px;
+    --aug-l1-height: 4px;
+    --aug-l-center: 28px;
+  
+    --aug-rect-r1: initial;
+    --aug-r1-width: (100% - 125px - 50px);
+    --aug-r1-height: 4px;
+    --aug-r-center: 28px;
+}
+
+.cardImage{
+    width: 150px;
+    height: 200px;
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.movieCard{
+    position: relative;
+    width: 150px;
+    height: 200px;
+    border: 0.1rem solid #fff;
+    padding: 0em;
+    background: no-repeat center/cover; 
+
+    transform:
+    perspective(800px)
+    rotateY(25deg) scale(0.9)
+    rotateX(10deg);
+    filter: blur(1px); 
+    opacity: 0.5;
+    transition: 0.1s ease all;
+    border-radius: 1rem;
+}
+
+.divTwo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+    width: 150px;
+    height: 200px;
+    border-radius: 1rem;
+    font-family: 'Inconsolata';
+    font-size: 18px;
+
+    color: white;
+    background-color: rgb(37, 0, 37);
+    transition: 0.2s ease all;
+    
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+.divTwo:hover{
+    opacity: .9;
+}
+
+.movieCard:hover{
+    transform:
+      perspective(800px)
+      rotateY(-5deg)
+      rotateX(10deg)
+      scale(1);
+    filter: blur(0);
+    opacity: 1;
+
+    border: 1px solid #fff;
+    box-shadow: 
+    0 0 .2rem rgb(223, 223, 223),           
+    0 0 .2rem rgb(223, 223, 223),           
+    0 0 2rem rgba(243, 7, 184, 0.459),           
+    0 0 0.8rem rgba(243, 7, 184, 0.459),          
+    0 0 2.8rem rgba(243, 7, 184, 0.459),           
+    inset 0 0 1.3rem rgba(243, 7, 184, 0.459);
+} 
+
+#containerTwo{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    width: 100%;
+    height: 300px;
+}
+
+.reviewCard{
+    width: 300px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    
+    margin-left: -30px;
+    padding: 1.1em;
+    background-color: purple;
+
+    transition: 0.1s ease all;
+
+    --aug-tl: 1rem;
+    --aug-border-all: 1px;
+    --aug-border-bg: rgb(253, 5, 253);
+    --aug-inlay-all: 0px;
+    --aug-inlay-bg: -moz-radial-gradient(rgba(196, 29, 188, 0.589), black);;
+    --aug-tr: 0.5rem;
+    --aug-tr-inset1: 15%;
+    --aug-bl: 0.5rem;
+    --aug-br-extend1: 55%;
+    --aug-br-extend2: 60%; 
+}
+
+.reviewCard:hover{
+    margin-right: 20px;
+    transform: translate(-15px);
+} 
+
+/* .reviewCard p{
+    font-size: 12px;
+    color: white
+} */
+
+.reviewData{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    /* box-sizing: border-box; */
+    background: no-repeat center/cover; 
+    color: white;
+    font: 15px 'Inconsolata', monospace;
+    height: 170px;
+    width: 90px;
+    padding: 5px 10px 5px 5px ;
+    margin: 5px;
+}
+
+.reviewImage{
+    width: 85px;
+    height: 120px;
+    border-radius: 1rem;
+
+    border: 1px solid white;
+    box-shadow: 
+    0 0 .2rem rgb(223, 223, 223),               
+    0 0 .2rem rgb(223, 223, 223),           
+    0 0 2rem rgba(202, 6, 153, 0.411),            
+    0 0 0.8rem rgba(202, 6, 153, 0.411),           
+    0 0 2.8rem rgba(202, 6, 153, 0.411),           
+    inset 0 0 1.3rem rgba(202, 6, 153, 0.411);
+}
+
+.reviewContent{
+    color: white;
+    font: 14px 'Inconsolata', monospace;
+    width: 210px;
+    height: 132px;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.reviewContent:hover{
+    overflow-y: scroll;
+}
