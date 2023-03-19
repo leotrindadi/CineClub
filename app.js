@@ -4,7 +4,7 @@ const containerTwo = document.querySelector("#containerTwo");
 
 window.addEventListener('load', async function () {
 
-    makeRequest('John Wick');
+    makeRequest('Avengers');
 
 });
 
@@ -28,8 +28,12 @@ const makeRequest = async function (request) {
     const res = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=84b0902521d7a8399d3b304738381a97&query=${config}&page=1`);
 
     //console.log(res.data.results.slice(0, 8));
-    makeDivs(res.data.results.slice(0, 5));
 
+    if(window.innerWidth > 1680){
+        makeDivs(res.data.results.slice(0, 7))
+    } else{
+        makeDivs(res.data.results.slice(0, 5));
+    }
 };
 
 const makeRequestCards = async function (requestTwo) {
@@ -40,7 +44,7 @@ const makeRequestCards = async function (requestTwo) {
     //console.log(resTwo);
 
     makeCards(resTwo.data);
-}
+};
 
 const makeCards = (reviews) => {
 
