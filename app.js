@@ -61,7 +61,7 @@ const makeCards = (reviews) => {
         const reviewDataRating = document.createElement('h5');
         reviewDataRating.innerHTML = `${reviews.reviews.results[0].author_details.rating}/10`;
         const reviewDataNoRating = document.createElement('h5');
-        reviewDataNoRating.innerHTML = 'None/10';
+        reviewDataNoRating.innerHTML = 'No Rating';
 
         const reviewDataImage = document.createElement('img');
         reviewDataImage.src = `http://image.tmdb.org/t/p/w185/${reviews.poster_path}`;
