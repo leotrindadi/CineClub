@@ -30,7 +30,7 @@ nav{
     padding: 20px;
     text-align: center;
     background: linear-gradient(to left, purple, transparent 95%);
-    border: 1px solid #fff;  
+    border: 1px solid rgba(253, 5, 253, 0.541);  
     border-radius: 20px 0px 20px 0px;
 }
 
@@ -41,15 +41,7 @@ nav .logo{
     text-decoration: none;
     
     color: white;
-    text-shadow:
-    0 0 7px rgb(223, 223, 223),
-    0 0 10px rgb(223, 223, 223),
-    0 0 21px rgb(223, 223, 223),
-    0 0 42px rgba(102, 3, 77, 0.76),
-    0 0 82px rgb(102, 3, 77, 0.76),
-    0 0 92px rgb(102, 3, 77, 0.76),
-    0 0 102px rgb(102, 3, 77, 0.76),
-    0 0 151px rgb(102, 3, 77, 0.76);       
+    text-shadow: rgb(255, 255, 255) 0px 0px 15px;    
 }
 
 nav .searchBar{
@@ -71,17 +63,9 @@ main h2{
     text-align: center;
     font-family: 'neon';
     color: white;
-    text-shadow:
-    0 0 7px rgb(223, 223, 223),
-    0 0 10px rgb(223, 223, 223),
-    0 0 21px rgb(223, 223, 223),
-    0 0 42px rgba(102, 3, 77, 0.76),
-    0 0 82px rgb(102, 3, 77, 0.76),
-    0 0 92px rgb(102, 3, 77, 0.76),
-    0 0 102px rgb(102, 3, 77, 0.76),
-    0 0 151px rgb(102, 3, 77, 0.76);
+    text-shadow: rgb(245, 157, 245) 0px 0px 15px; 
 
-    font-size: 40px;
+    font-size: 60px;
     padding: 40px;
 }
 
@@ -89,18 +73,10 @@ main h3{
     text-align: center;
     font-family: 'neon';
     color: white;
-    text-shadow:
-    0 0 7px rgb(223, 223, 223),
-    0 0 10px rgb(223, 223, 223),
-    0 0 21px rgb(223, 223, 223),
-    0 0 42px rgba(102, 3, 77, 0.76),
-    0 0 82px rgb(102, 3, 77, 0.76),
-    0 0 92px rgb(102, 3, 77, 0.76),
-    0 0 102px rgb(102, 3, 77, 0.76),
-    0 0 151px rgb(102, 3, 77, 0.76);
+    text-shadow: rgb(245, 157, 245) 0px 0px 10px; 
 
-    font-size: 40px;
-    padding: 40px;
+    font-size: 60px;
+    padding: 40px 0px 20px 0px;
 }
 
 #container{
@@ -149,7 +125,7 @@ main h3{
     position: relative;
     width: 150px;
     height: 200px;
-    border: 0.1rem solid #fff;
+    border: 1px solid white;
     padding: 0em;
     background: no-repeat center/cover; 
 
@@ -178,7 +154,7 @@ main h3{
 
     color: white;
     background-color: rgb(37, 0, 37);
-    transition: 0.2s ease all;
+    transition: 0.5s ease all;
     
     left: 0;
     top: 0;
@@ -200,14 +176,10 @@ main h3{
     filter: blur(0);
     opacity: 1;
 
-    border: 1px solid #fff;
-    box-shadow: 
-    0 0 .2rem rgb(223, 223, 223),           
-    0 0 .2rem rgb(223, 223, 223),           
-    0 0 2rem rgba(243, 7, 184, 0.459),           
-    0 0 0.8rem rgba(243, 7, 184, 0.459),          
-    0 0 2.8rem rgba(243, 7, 184, 0.459),           
-    inset 0 0 1.3rem rgba(243, 7, 184, 0.459);
+    border: 1px solid white;
+    -webkit-box-shadow:0px 0px 20px 2px rgba(245, 75, 202, 0.925);
+    -moz-box-shadow: 0px 0px 20px 2px rgba(245, 75, 202, 0.925);
+    box-shadow: 0px 0px 20px 2px rgba(245, 75, 202, 0.925);   
 } 
 
 #containerTwo{
@@ -227,7 +199,7 @@ main h3{
     
     margin-left: -30px;
     padding: 1.1em;
-    background-color: purple;
+    background: linear-gradient(to bottom, black, rgb(112, 1, 112));
 
     transition: 0.1s ease all;
 
@@ -235,7 +207,7 @@ main h3{
     --aug-border-all: 1px;
     --aug-border-bg: rgb(253, 5, 253);
     --aug-inlay-all: 0px;
-    --aug-inlay-bg: -moz-radial-gradient(rgba(196, 29, 188, 0.589), black);;
+    --aug-inlay-bg: -moz-radial-gradient(rgba(196, 29, 188, 0.589), black);
     --aug-tr: 0.5rem;
     --aug-tr-inset1: 15%;
     --aug-bl: 0.5rem;
@@ -270,13 +242,9 @@ main h3{
     border-radius: 1rem;
 
     border: 1px solid white;
-    box-shadow: 
-    0 0 .2rem rgb(223, 223, 223),               
-    0 0 .2rem rgb(223, 223, 223),           
-    0 0 2rem rgba(202, 6, 153, 0.411),            
-    0 0 0.8rem rgba(202, 6, 153, 0.411),           
-    0 0 2.8rem rgba(202, 6, 153, 0.411),           
-    inset 0 0 1.3rem rgba(202, 6, 153, 0.411);
+    -webkit-box-shadow:0px 0px 15px 1px rgba(245,98,211,1);
+    -moz-box-shadow: 0px 0px 15px 1px rgba(245,98,211,1);
+    box-shadow: 0px 0px 15px 1px rgba(245,98,211,1);
 }
 
 .reviewContent{
