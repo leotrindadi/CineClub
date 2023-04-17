@@ -5,10 +5,32 @@
 }
 
 body{
-    background: no-repeat center/cover url(ftos/High_resolution_wallpaper_background_ID_77700338499.jpg);
-    background-color: rgb(27, 27, 27);
+    background: no-repeat center/cover url(ftos/8325092.jpg);
+    background-color: rgb(41, 40, 40);
     background-blend-mode: multiply;
 }    
+
+.fade{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+    animation-name: fadeIn;
+    animation-duration: .1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 @font-face {
     font-family: 'neon';
@@ -81,15 +103,7 @@ main h3{
     padding: 40px 0px 20px 0px;
 }
 
-#container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 48px;
-    width: 90%;
-    height: 300px;
-    margin: auto;
-    box-sizing: border-box;
+#wrapper{
 
     --aug-tr: 25px;
     --aug-bl: 57px;
@@ -99,6 +113,7 @@ main h3{
     --aug-border-bg: rgb(253, 5, 253); 
     --aug-inlay-all: 0px;
     --aug-inlay-bg: linear-gradient(to bottom, purple, transparent 100%);
+
     --aug-rect-l1: initial;
     --aug-l1-width: 110px;
     --aug-l1-height: 4px;
@@ -107,6 +122,47 @@ main h3{
     --aug-r1-width: (100% - 125px - 50px);
     --aug-r1-height: 4px;
     --aug-r-center: 28px;
+
+    padding: 20px;
+    width: 80%;
+    height: 290px;
+    margin: auto;
+    
+    justify-content: center;
+    display: flex;
+}
+
+#left, #leftTwo, #right, #rightTwo{
+    width: 46px;
+    height: 46px;
+    background:transparent;
+    font-size: 20px;
+    color: rgba(253, 5, 253, 0.699);
+    align-self: center;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+#leftTwo, #rightTwo{
+    font-size: 30px;
+}
+
+#container{
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    align-items: center;
+    width: 90%;
+    
 }
 
 .cardImage{
@@ -126,6 +182,9 @@ main h3{
     border: 1px solid white;
     padding: 0em;
     background: no-repeat center/cover; 
+    margin: 20px;
+
+    scroll-snap-align: center;
 
     transform:
     perspective(800px)
@@ -149,7 +208,7 @@ main h3{
     font-family: 'Inconsolata';
     font-size: 18px;
     color: white;
-    background-color: rgb(37, 0, 37);
+    background-color: rgb(15, 0, 15);
     transition: 0.5s ease all;
     left: 0;
     top: 0;
@@ -160,6 +219,33 @@ main h3{
 
 .divTwo:hover{
     opacity: .9;
+}
+
+#movieMoreButton{
+    --aug-clip-tl1: initial;
+    --aug-clip-tr1: initial;
+    --aug-clip-br1: initial;
+    --aug-clip-bl1: initial;
+    --aug-border: initial;
+    --aug-inlay: initial;
+    --aug-border-all: 1px;
+    --aug-inlay-all: 0px;
+    --aug-border-bg: white;
+    --aug-inlay-bg: transparent;
+    --aug-inlay-opacity: 0.95;
+    --aug-tl1: 8px;
+    --aug-br1: 8px;
+    --aug-tr1: 8px;
+    --aug-bl1: 8px;
+    margin: 10px;
+    color: white;
+    font-family: 6px, 'Inconsolata', monospace;
+    font-weight: bolder;
+    cursor: pointer;
+    height: 30px;
+    width: 50px;
+    background-color: transparent;
+    text-shadow: rgb(255, 255, 255) 0px 0px 5px; 
 }
 
 .movieCard:hover{
@@ -176,22 +262,39 @@ main h3{
     box-shadow: 0px 0px 20px 2px rgba(245, 75, 202, 0.925);   
 } 
 
-#containerTwo{
+#wrapperTwo{
+    width: 100%;
     display: flex;
+    justify-content: center;
+}
+
+#containerTwo{
+    /* display: flex;
     justify-content: center;
     padding-top: 20px;
     width: 100%;
     height: 300px;
-    overflow: hidden;
+    overflow: hidden; */
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 36%;
+    width: 70%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    margin-left: 17px;
 }
 
 .reviewCard{
-    width: 300px;
+    width: 290px;
     height: 180px;
     display: flex;
     justify-content: center;
-    margin-left: -30px;
-    padding: 1.1em;
+    padding-left: 30px;
+    padding: 1em;
     background: linear-gradient(to bottom, black, rgb(112, 1, 112));
     transition: 0.1s ease all;
 
@@ -206,11 +309,6 @@ main h3{
     --aug-br-extend1: 55%;
     --aug-br-extend2: 60%; 
 }
-
-.reviewCard:hover{
-    margin-right: 20px;
-    transform: translate(-15px);
-} 
 
 .reviewData{
     display: flex;
@@ -249,3 +347,267 @@ main h3{
 .reviewContent:hover{
     overflow-y: scroll;
 }
+
+#modal{
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    background: linear-gradient(to top, rgb(253, 5, 253), transparent 100%);
+    left: 30%;
+    top: 25%;
+
+    --aug-tl: 1rem;
+    --aug-border-bottom: 30px;
+    --aug-border-top: 4px;
+    --aug-border-left: 4px;
+    --aug-border-right: 5px;
+    --aug-border-bg: radial-gradient(at bottom, rgb(253, 5, 253) 20%, rgba(112, 1, 112, 0.973) 80%);
+    --aug-inlay-all: 0px;
+    --aug-rect-t1: initial;
+    --aug-t1-width: 10px;
+    --aug-t1-height: 412px;
+    --aug-inlay-bg: linear-gradient(to bottom, transparent 70%, rgb(0, 0, 0));
+    --aug-bl1: 50px;
+    --aug-br1: 50px; 
+}
+
+.modalComing{
+    animation-name: comingIn;
+    animation-duration: .1s;
+}
+
+.modalGoing{
+    animation-name: comingOut;
+    animation-duration: .1s;
+}
+
+@keyframes comingIn {
+    from {
+
+        opacity: .3;
+    }
+
+    to {   
+        
+        opacity: 1;
+    }
+};
+
+
+.modalAnimation{
+    animation-name: comingOut;
+    animation-duration: .5s;
+}
+
+
+@keyframes comingOut {
+    from {
+        
+        opacity: 1;
+    }
+
+    to {
+        
+        opacity: .3;
+    }
+}
+
+.modalImage{
+    width: 120px;
+    height: 160px;
+    border-radius: 1rem;
+    border: 1px solid white;
+    opacity: .8;
+    
+
+    -webkit-box-shadow:0px 0px 15px 1px rgba(245,98,211,1);
+    -moz-box-shadow: 0px 0px 15px 1px rgba(245,98,211,1);
+    box-shadow: 0px 0px 15px 1px rgba(245,98,211,1); 
+}
+
+.modalData{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    height: 180px;
+    width: 90px;
+}
+
+.modalContent{
+    color: white;
+    font: 14px 'Inconsolata', monospace;
+    width: 250px;
+    height: 120px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.modalContent:hover{
+    overflow-y: scroll;
+}
+
+.modalContent p {
+    text-shadow: rgba(255, 255, 255, 0.74) 0px 0px 5px;  
+}
+
+.modalContent h5{
+    font-size: 15px;
+    text-shadow: rgb(255, 255, 255) 0px 0px 5px; 
+}
+
+.modalPattern{
+    width: 250px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 24px;
+}
+
+.modalFormPattern{
+    height: 350px;
+    width: 250px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inconsolata', monospace; 
+    text-align: center;
+}
+
+.modalContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+}
+
+#reviewForm{
+    height: 300px;
+}
+
+#reviewTitle{
+    padding: 10px;
+    font-family: 'neon';
+    font-size: 20px;
+    border: solid 3px white;
+    border-radius: 12px;
+    text-shadow: rgb(255, 255, 255) 0px 0px 15px;  
+    -webkit-box-shadow:0px 0px 15px 1px rgba(245,98,211,1);
+    -moz-box-shadow: 0px 0px 15px 1px rgba(245,98,211,1);
+    box-shadow: 0px 0px 15px 1px rgba(245,98,211,1); 
+    background-color: transparent;
+    margin-bottom: 5px;
+}
+
+#reviewTitle:focus{
+    outline: none;
+}
+
+#usernameInput{
+    width: 100px;
+    height: 20px;
+    background-color: transparent;
+    border: solid 1px white;
+    -webkit-box-shadow:0px 0px 5px 1px rgb(194, 90, 170);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(194, 90, 170);
+    box-shadow: 0px 0px 5px 1px rgba(194, 90, 170); 
+    margin: 5px;
+    color: white;
+}
+
+#usernameInput:focus{
+    outline: none;
+}
+
+#ratingInput{
+    width: 100px;
+    height: 20px;
+    background-color: transparent;
+    border: solid 1px white;
+    -webkit-box-shadow:0px 0px 5px 1px rgba(194, 90, 170);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(194, 90, 170);
+    box-shadow: 0px 0px 5px 1px rgba(194, 90, 170); 
+    color: white;
+}
+
+#ratingInput:focus{
+    outline: none;
+}
+
+#reviewBox{
+    height: 100px;
+    margin: 10px;
+}
+
+#reviewInput{
+    height: 90px;
+    width: 200px;
+    background-color: transparent;
+    color: white;
+    border: solid 1px white;
+    border-radius: 0px 20px 0px 20px;
+    -webkit-box-shadow:0px 0px 5px 1px rgba(194, 90, 170);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(194, 90, 170);
+    box-shadow: 0px 0px 5px 1px rgba(194, 90, 170); 
+}
+
+#reviewInput:focus{
+    outline: none;
+}
+
+#submitButton{
+    --aug-clip-tl1: initial;
+    --aug-round-tr1: initial;
+    --aug-clip-br1: initial;
+    --aug-round-bl1: initial;
+    --aug-border: initial;
+    --aug-inlay: initial;
+    --aug-border-all: 2px;
+    --aug-inlay-all: 0px;
+    --aug-border-bg: #cccccc;
+    --aug-inlay-bg: transparent;
+    --aug-inlay-opacity: 0.95;
+    --aug-tl1: 20px;
+    --aug-br1: 20px;
+    --aug-tr1: 10px;
+    --aug-bl1: 10px;
+    color: white;
+    padding: 20px;
+    font-family: 15px 'Inconsolata', monospace;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: transparent;
+    text-shadow: rgb(255, 255, 255) 0px 0px 10px; 
+}
+
+#movieLessButton {
+    --aug-clip-tl1: initial;
+    --aug-clip-tr1: initial;
+    --aug-clip-br1: initial;
+    --aug-clip-bl1: initial;
+    --aug-border: initial;
+    --aug-inlay: initial;
+    --aug-border-all: 2px;
+    --aug-inlay-all: 0px;
+    --aug-border-bg: white;
+    --aug-inlay-bg: transparent;
+    --aug-inlay-opacity: 0.95;
+    --aug-tl1: 8px;
+    --aug-br1: 8px;
+    --aug-tr1: 8px;
+    --aug-bl1: 8px;
+    margin: 10px;
+    color: white;
+    font-family: 50px, 'Inconsolata', monospace;
+    font-weight: bolder;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    text-shadow: rgb(255, 255, 255) 0px 0px 5px; 
+}
+

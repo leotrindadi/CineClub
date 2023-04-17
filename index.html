@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cine Club</title>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/augmented-ui@2/augmented-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="divFade"></div>
     <nav>
         <a href="#" class="logo">CC</a>
         <form id="searchForm">
@@ -19,12 +21,21 @@
 
     <main>
         <h2>TOP MOVIES</h2>
-        <div id="container" data-augmented-ui="tr-clip bl-clip br-clip-y both">
+        <div id="wrapper" data-augmented-ui="tr-clip bl-clip br-clip-y both" >
+            <button id="left" class="fa-solid fa-angles-left"></button>
+            <div id="container">
+            </div> 
+            <button id="right" class="fa-solid fa-angles-right"></button>
         </div>
 
+
         <h3>REVIEWS</h3>
-        <div id="containerTwo">    
-        </div>  
+        <div id="wrapperTwo">
+            <button id="leftTwo" class="fa-solid fa-angles-left"></button>
+            <div id="containerTwo">    
+            </div>  
+            <button id="rightTwo" class="fa-solid fa-angles-right"></button>
+        </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
